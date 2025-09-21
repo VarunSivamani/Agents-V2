@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Agentic AI Stock Analyzer",
+  "version": "1.0",
+  "description": "An agentic AI Chrome plugin that analyzes stocks with price tracking and news analysis",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*",
+    "https://api.exa.ai/*",
+    "https://query1.finance.yahoo.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Agentic AI Stock Analyzer"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
